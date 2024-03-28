@@ -22,7 +22,7 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get("http://localhost:8080/api/chat", config);
+      const { data } = await axios.get("https://chat-app-react-socket-io-f7lw.onrender.com/api/chat", config);
       setChats(data);
     } catch (error) {
       toast({

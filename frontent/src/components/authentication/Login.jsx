@@ -40,7 +40,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:8080/api/user/login",
+        "https://chat-app-react-socket-io-f7lw.onrender.com/api/user/login",
         { email, password },
         config
       );

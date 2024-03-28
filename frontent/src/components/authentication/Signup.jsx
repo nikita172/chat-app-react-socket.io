@@ -92,7 +92,7 @@ const Signup = () => {
           "Content-type": "application/json",
         }
       };
-      const { data } = await axios.post("http://localhost:8080/api/user", { name, email, password, pic }, config);
+      const { data } = await axios.post("https://chat-app-react-socket-io-f7lw.onrender.com/api/user", { name, email, password, pic }, config);
       toast({
         title: "Registration Successful",
         status: "success",

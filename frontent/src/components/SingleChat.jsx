@@ -12,7 +12,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import { ChatState } from "../Context/ChatProvider";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
-const ENDPOINT = "http://localhost:8080";
+const ENDPOINT = "https://chat-app-react-socket-io-f7lw.onrender.com";
 // "https://talk-a-tive.herokuapp.com"; -> After deployment
 var socket, selectedChatCompare;
 
@@ -51,7 +51,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `http://localhost:8080/api/message/${selectedChat._id}`,
+        `https://chat-app-react-socket-io-f7lw.onrender.com/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -82,7 +82,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "http://localhost:8080/api/message",
+          "https://chat-app-react-socket-io-f7lw.onrender.com/api/message",
           {
             content: newMessage,
             chatId: selectedChat,

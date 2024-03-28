@@ -32,7 +32,7 @@ const server = app.listen(port,
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:5175"
+    origin: "https://rainbow-cassata-9a2024.netlify.app"
   }
 })
 
