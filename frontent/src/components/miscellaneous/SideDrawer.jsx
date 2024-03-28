@@ -4,8 +4,6 @@ import { ChatState } from "../../Context/ChatProvider";
 import { useNavigate } from "react-router-dom";
 import { Avatar, Box, Button, Menu, MenuButton, MenuDivider, Text, Tooltip, useToast, MenuList, MenuItem, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Input, Spinner } from "@chakra-ui/react";
 import { BellIcon, ChevronDownIcon } from "@chakra-ui/icons";
-import { Effect, } from "react-notification-badge"
-import NotificationBadge from "react-notification-badge";
 import ProfileModal from "./ProfileModal";
 import ChatLoading from "../ChatLoading";
 import axios from "axios";
@@ -127,10 +125,11 @@ function SideDrawer() {
         <div>
           <Menu>
             <MenuButton p={1}>
-              <NotificationBadge
+              {/* <NotificationBadge
                 count={notification.length}
                 effect={Effect.SCALE}
-              />
+              /> */}
+              <div style={{ color: "white", backgroundColor: "tomato", borderRadius: "50%", padding: "2px" }}>{notification.length > 0 && notification.length}</div>
               <BellIcon fontSize="2xl" m={1} />
             </MenuButton>
             <MenuList pl={2}>
